@@ -24,10 +24,14 @@ jobs:
         env:
           ALLOW_NONE_AUTHENTICATION: yes
 
-    steps:
+    container:
+      image: johz/apisix:latest
+      env:
+        ETCD_HOST: etcd
+      ports:
+        - 9080:9080
 
-    - name: run apisix
-      uses: docker://apache/apisix
+    steps:
 
     - uses: actions/checkout@v2
 
