@@ -24,7 +24,7 @@ jobs:
       apisix:
         image: johz/apisix:1.2.ehfe
         env:
-          APISIX_ETCD_HOST: etcd
+          APISIX_ETCD_HOST: http://etcd:2379
         ports:
           - 9080:9080
 
