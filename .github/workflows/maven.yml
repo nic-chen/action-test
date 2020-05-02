@@ -22,7 +22,7 @@ jobs:
           ALLOW_NONE_AUTHENTICATION: yes
 
       apisix:
-        image: johz/apisix:1.2.ehfe
+        image: johz/apisix:1.2-github-action
         env:
           APISIX_ETCD_HOST: http://etcd:2379
         ports:
